@@ -1,0 +1,8 @@
+.mask{
+    position: absolute;
+    width: 105vw;
+    height: 100vh;
+    background-color: rgba(0, 0, 0, 0.521);
+    left: -10px;
+    top:-5px
+}
