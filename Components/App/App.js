@@ -9,8 +9,10 @@ class App extends React.Component{
     render(){
         if(this.props.cyclestate.login_panel_cycle === "unmount" ){
            return(
-               <Mask />,
+               <div>
+               <Mask content="test" />
                <MainButton/>
+               </div>
            )
         }else{
             return(
