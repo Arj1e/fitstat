@@ -3,7 +3,6 @@ import './style/App.css';
 import LoginPanel from '../LoginPanel/LoginPanel';
 import MainButton from '../MainButton/MainButton';
 import Mask from '../Mask/Mask';
-import ParamsPanel from '../ParamsPanel/ParamsPanel';
 import { connect } from 'react-redux';
 class App extends React.Component{
   

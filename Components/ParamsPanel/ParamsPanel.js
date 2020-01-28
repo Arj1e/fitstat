@@ -1,12 +1,10 @@
-import React from 'react';
+import React, { Component } from 'react'
 import './style.css';
 
-import React, { Component } from 'react'
-
-export default class ParamsPanel extends Component {
+class ParamsPanel extends Component {
     render() {
         return (
-            <div>
+            <div className={'params-panel'}>
                 test
             </div>
         )
