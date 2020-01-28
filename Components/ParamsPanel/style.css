@@ -7,3 +7,28 @@
     border-radius: 5px;
     text-align: center;
 }
+.close-params{
+    text-align: center;
+    color: blue;
+    font-size: large;
+    transform: rotate(45deg);
+    position: absolute;
+    right: 16%;
+    border-radius: 50%;
+    transition: 200ms;
+    
+    height: 18px;
+    width: 18px;
+}
+.close-params:hover{
+    color: blue;
+    font-size: large;
+    transform: rotate(45deg);
+    position: absolute;
+    right: 16%;
+    border-radius: 50%;
+    background-color: cornflowerblue;
+    height: 18px;
+    width: 18px;
+    transition: 200ms;
+}
