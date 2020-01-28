@@ -2,11 +2,31 @@ import React from 'react';
 import ParamsPanel from '../ParamsPanel/ParamsPanel';
 import './style.css';
 import './animation.css';
+import {connect} from 'react-redux';
+import app_actions from '../../Ducks/AppStore/actions';
+import cycle_actions from '../../Ducks/LifeCycle/actions';
 
 class Mask extends React.Component {
+    constructor(props){
+        super(props)
+        this.state= {
+            animation:'fade-in'
+            }
+    }
+   animationWhenUnmount= ()=>{
+        if(this.props.cyclestate.mask_params_animation =="unmount"){
+        this.setState({animation:'fade-out'})
+        }
+    }
+    componentWillMount(){
+        this.animationWhenUnmount();
+    }
+    componentDidUpdate(){
+        this.animationWhenUnmount();
+    }
     render() {
         return (
-            <div className={'mask'}>
+            <div className={this.state.animation+' mask'}>
 
                 <ParamsPanel/>
                 
@@ -16,4 +36,17 @@ class Mask extends React.Component {
 }
 
 
-export default Mask;
+const mapStateToProps= state =>({
+    appstate: state.appstate,
+    cyclestate: state.cyclestate
+})
+const mapDispatchToProps = dispach =>({
+    set_userid: id => dispach(app_actions.idset(id)),
+    set_cycle : cycle => dispach(cycle_actions.cycleset(cycle))
+    
+})
+
+export default connect(
+    mapStateToProps,
+    mapDispatchToProps
+)(Mask);

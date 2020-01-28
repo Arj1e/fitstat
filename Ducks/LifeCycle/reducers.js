@@ -2,7 +2,9 @@ import types from './types';
 
 const initialCycles = {
     login_panel_cycle:"mounted",
-    mask_params_cycle:"mounted"
+    login_panel_animation:"mounted",
+    mask_params_cycle:"mounted",
+    mask_params_animation:"mounted"
 }
 
 const mountCyclesReducer = (state = initialCycles, action) =>{
