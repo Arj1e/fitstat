@@ -14,10 +14,19 @@ const mountCyclesReducer = (state = initialCycles, action) =>{
             return{
                 ...state, login_panel_cycle: action.item
             }
+        case types.UPDATE_LOGIN_ANIMATION:
+            return{
+                ...state, login_panel_animation: action.item
+            }    
         case types.UPDATE_MASK_CYCLE:
             return{
                 ...state, mask_params_cycle: action.item
             }
+        case types.UPDATE_MASK_ANIMATION:
+            return{
+                ...state, mask_params_animation: action.item
+            }
+
     
 
         default:
