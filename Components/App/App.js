@@ -3,6 +3,7 @@ import './style/App.css';
 import LoginPanel from '../LoginPanel/LoginPanel';
 import MainButton from '../MainButton/MainButton';
 import Mask from '../Mask/Mask';
+import ParamsPanel from '../ParamsPanel/ParamsPanel';
 import { connect } from 'react-redux';
 class App extends React.Component{
   
@@ -10,7 +11,7 @@ class App extends React.Component{
         if(this.props.cyclestate.login_panel_cycle === "unmount" ){
            return(
                <div>
-               <Mask content="test" />
+               <Mask />
                <MainButton/>
                </div>
            )
