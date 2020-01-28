@@ -1,5 +1,6 @@
 const UPDATE_CYCLE = 'UPDATE_CYCLE';
-
+const UPDATE_MASK_CYCLE = 'UPDATE_MASK_CYCLE';
 export default {
-     UPDATE_CYCLE
+     UPDATE_CYCLE,
+     UPDATE_MASK_CYCLE
     };

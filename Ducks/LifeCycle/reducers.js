@@ -1,7 +1,8 @@
 import types from './types';
 
 const initialCycles = {
-    login_panel_cycle:"mounted"
+    login_panel_cycle:"mounted",
+    mask_params_cycle:"mounted"
 }
 
 const mountCyclesReducer = (state = initialCycles, action) =>{
@@ -11,6 +12,12 @@ const mountCyclesReducer = (state = initialCycles, action) =>{
             return{
                 ...state, login_panel_cycle: action.item
             }
+        case types.UPDATE_MASK_CYCLE:
+            return{
+                ...state, mask_params_cycle: action.item
+            }
+    
+
         default:
             return state
     }
