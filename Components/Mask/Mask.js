@@ -15,7 +15,10 @@ class Mask extends React.Component {
     }
    animationWhenUnmount= ()=>{
         if(this.props.cyclestate.mask_params_animation =="unmount"){
-        this.setState({animation:'fade-out'})
+        this.setState({animation:'fade-out'});
+        setTimeout(()=>{
+            this.props.set_mask_cycle("unmount");
+        },1000);
         }
     }
     componentWillMount(){
@@ -42,7 +45,9 @@ const mapStateToProps= state =>({
 })
 const mapDispatchToProps = dispach =>({
     set_userid: id => dispach(app_actions.idset(id)),
-    set_cycle : cycle => dispach(cycle_actions.cycleset(cycle))
+    set_cycle : cycle => dispach(cycle_actions.cycleset(cycle)),
+    set_mask_cycle : cycle => dispach(cycle_actions.maskparams(cycle)),
+    set_mask_animation : cycle => dispach(cycle_actions.maskanimate(cycle))
     
 })
 
