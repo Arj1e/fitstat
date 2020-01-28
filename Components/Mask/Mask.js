@@ -1,14 +1,19 @@
 import React from 'react';
+import ParamsPanel from '../ParamsPanel/ParamsPanel';
 import './style.css';
+import './animation.css';
 
-const Mask =(props)=>{   
-    
-        return(
+class Mask extends React.Component {
+    render() {
+        return (
             <div className={'mask'}>
-                {props.content}
 
+                <ParamsPanel/>
+                
             </div>
-        );
-    
+        )
+    }
 }
+
+
 export default Mask;
